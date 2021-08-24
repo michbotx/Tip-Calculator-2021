@@ -5,40 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="app.css">
+  <title>Mich Bot Splitter</title>
 </head>
+<header>
+  <img class="logo" src="C:\Users\Nathan\Desktop\Web Dev\Frontend Mentor challenges\tip-calculator-app-main\images\logo.svg">
+
+</header>
 <body>
 
-  Bill
+  <div class="container">
+    <section class="billInfo">
+      <form id="billForm"> 
+        <label for="bill" class="billTitles">Bill</label>
+        <input type="text" id="bill" name="bill" placeholder="0">
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+        <div class="tips">
+          <p class="billTitles" id="tipForm">Select Tip %</p>
+          <button class="tipButtons">5%</button>
+          <button class="tipButtons">10%</button>
+          <button class="tipButtons">15%</button>
+          <button class="tipButtons">25%</button>
+          <button class="tipButtons">50%</button>
+          <input type="text" class="tipButtons customTip" id="custom" placeholder="Custom">
+        </div>
+   
+      <label for="numPeople" class="billTitles">Number of People <span id="zero">Can't be zero</span></label>
+      <input type="number" id="numPeople" name="numPeople" placeholder="0" min="1" max="99">
+      </form>
+    </section> 
 
-  Number of People
+    <section class="tipInfo"> 
+      <div class="tipContainer">
+        <div class="tipText">
+          <p class="tipTitles">Tip Amount</p>
+          <p class="tipSubtitles">/ person</p>
+        </div>
+        <div class="tipText">
+          <p class=tipAmount>$0.00</p>
+        </div>
+      </div>
 
-  Tip Amount
-  / person
+      <div class="tipContainer"> 
+        <div class="tipText">
+          <p class="tipTitles">Total</p>
+          <p class="tipSubtitles">/ person</p>
+        </div>
+        <div class="tipText"> 
+          <p class=tipTotal>$0.00</p>
+        </div>
+      </div>
 
-  Total
-  / person
+      <div class="tipContainer">
+        <button id="resetButton" disabled>Reset</button>
 
-  Reset
+      </div>
+
+    </section>
+
+  </div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Mich Bot</a>.
   </div>
+
+
+  <script src="app.js"></script>
 </body>
 </html>

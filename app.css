@@ -1,0 +1,253 @@
+html {
+    font-family: 'Space Mono', monospace;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(185, 41%, 84%);
+
+}
+
+
+header {
+    text-align: center;
+}
+
+.logo {
+    width: auto;
+    height: auto;
+    padding: 10px; 
+    margin: 20px auto;
+}
+
+.container {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 0 auto;
+    max-width: 100%;
+    box-shadow: 5px 4px 12px darkgrey;
+
+}
+
+/* Bill Amount Section */
+
+.billInfo {
+    display:flex;
+    flex-wrap: wrap;
+    flex: 1 1 200px;
+}
+
+.billTitles {
+    margin: 10px 0;
+    color: hsl(183, 100%, 15%);
+    font-size: 15px;
+    font-weight: 700;
+    display: inline-block;
+    width: 100%;
+}
+#billForm {
+    margin: 10px;
+    padding: 10px;
+}
+
+#bill {
+    background-image: url(images/icon-dollar.svg);
+    background-position: 14px 14px;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 700;
+    color:hsl(183, 100%, 15%);
+    width: 100%;
+}
+
+input {
+    font-family: 'Space Mono';
+
+}
+input:focus {
+    border: 1px solid hsl(172, 67%, 45%);
+    box-shadow: 0 0 3px ;
+    outline-offset: 0px;
+    outline: none;
+}
+
+/* Tip Buttons Section */
+
+#tipForm {
+    width: 100%;
+}
+
+.tips {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.tipButtons{
+    box-sizing: border-box;
+    width: 120px;
+    height: 50px;
+    margin: 5px;
+    font-weight: 700;
+    font-size: 21px; 
+    color: hsl(189, 41%, 97%);  
+    background-color:hsl(183, 100%, 15%);
+    border: none;
+    border-radius: 10px;
+    flex: 1 1 120px;
+    font-family: 'Space Mono';
+}
+
+.customTip {
+    box-sizing: border-box;
+    width: 120px;
+    height: 50px;
+    margin: 5px;
+    font-weight: 700;
+    font-size: 21px; 
+    color:hsl(183, 100%, 15%);
+    background-color:hsl(189, 41%, 97%);
+    border: none;
+    border-radius: 10px;
+    text-align: right;
+    flex: 1 1 120px;
+    padding-right: 10px;
+    font-family: 'Space Mono';
+
+}
+
+.active {
+    background-color:hsl(172, 67%, 45%);
+    color:hsl(183, 100%, 15%);
+}
+
+.customTipActive {
+    border: 1px solid hsl(172, 67%, 45%);
+
+}
+
+input[type=number] {
+    background-image: url(images/icon-person.svg);
+    background-position: 14px 14px;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 700;
+    color:hsl(183, 100%, 15%);
+}
+
+/* Calculation Container  */
+
+.tipInfo {
+    background-color:hsl(183, 100%, 15%);
+    border-radius: 20px;
+    padding: 25px;
+    
+}
+
+.tipContainer {
+    display: flex;
+    justify-content: space-between;  
+}
+
+.tipTitles {
+    color: hsl(185, 41%, 84%);
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 0;
+
+}
+
+.tipSubtitles {
+    margin-top: 0;
+    padding: 0;
+    color: hsl(185, 41%, 84%);
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.tipAmount {
+    text-align: right;
+    font-size: 21px;
+    font-weight: 700;
+    color:hsl(172, 67%, 45%)
+}
+.tipTotal {
+    text-align: right;
+    font-size: 21px;
+    font-weight: 700;
+    color:hsl(172, 67%, 45%);
+}
+
+#resetButton {
+    width: 100%;
+    background-color: hsl(172, 67%, 45%);
+    color:hsl(183, 100%, 15%);
+    height: 50px;
+    margin: 10px 0;
+    font-weight: 700;
+    font-size: 21px; 
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    opacity: 0.3;
+}
+
+
+
+#zero {
+    float: right;
+    font-size: 13px;
+    color:red;
+    margin: 0px;
+    padding: 0px;
+}
+
+@media (min-width:780px) {
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        max-width: 796px;
+    }
+
+    .billInfo {
+        margin-right: 30px;
+    }
+    .tipInfo {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+    }
+    .tipContainer {
+        margin: 10px 0;
+    }
+    .tipContainer:last-child {
+        width: 100%;
+        margin: auto 0;
+    }
+
+}
+
+/*----------------- */
+
+.attribution { 
+    margin-top: 15px;
+    font-size: 10px; 
+    text-align: center; 
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
